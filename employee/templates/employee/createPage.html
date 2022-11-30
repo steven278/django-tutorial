@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% block content %}
+<h2>create employee</h2>
+<form action="createData/" method="post">
+    {% csrf_token %}
+    Name : <input type="text" name="name">
+    Title: <input type="text" name="title">
+    <input type="submit" value="Create" class="btn btn-danger"></input>
+</form>
+{% endblock content %}
+
+{%block message%}
+<h1>Hello world from message</h1>
+{%endblock%}
